@@ -154,6 +154,178 @@ section{padding:100px 60px}
 /* FOOTER */
 footer{background:var(--dark);padding:28px 60px;display:flex;align-items:center;justify-content:space-between}
 footer p{font-size:12px;color:rgba(255,255,255,.35)}
+
+/* HAMBURGER MENU & LINKS */
+.menu-toggle {
+  display: none;
+}
+.company-link {
+  color: var(--dark);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.company-link:hover {
+  color: var(--orange);
+}
+
+/* RESPONSIVE DESIGN (MEDIA QUERIES) */
+@media (max-width: 768px) {
+  /* GLOBAL & NAV */
+  section {
+    padding: 60px 24px;
+  }
+  nav {
+    padding: 0 24px;
+  }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--orange);
+    transition: all 0.3s ease;
+  }
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-card);
+    border-bottom: 2px solid var(--orange);
+    padding: 20px 0;
+    gap: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li a {
+    display: inline-block;
+    padding: 8px 20px;
+  }
+  nav ul li a.cta {
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  /* TYPOGRAPHY */
+  .section-title {
+    font-size: 38px;
+    margin-bottom: 12px;
+  }
+  .section-intro {
+    font-size: 16px;
+    margin-bottom: 36px;
+  }
+  #hero h1 {
+    font-size: 44px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  #hero p {
+    font-size: 16px;
+    margin-bottom: 36px;
+  }
+  .btn-hero {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  #contact h2 {
+    font-size: 44px;
+  }
+  #contact p {
+    font-size: 16px;
+    margin-bottom: 36px;
+  }
+
+  /* THESIS */
+  .pillars {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* BELIEFS */
+  .beliefs-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* METHODOLOGY */
+  .phases-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .phases-grid-bottom {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 12px;
+  }
+  .macro-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 36px;
+  }
+
+  /* FOCUS */
+  .focus-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* PORTFOLIO */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* GOVERNANCE */
+  .gov-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* TEAM */
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 30px 24px;
+  }
+}
 </style>
 </head>
 <body>
@@ -166,7 +338,12 @@ footer p{font-size:12px;color:rgba(255,255,255,.35)}
       <span>CI&Ecirc;NCIA</span>
     </div>
   </a>
-  <ul>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <ul id="navMenu">
     <li><a href="#thesis">Thesis</a></li>
     <li><a href="#beliefs">Beliefs</a></li>
     <li><a href="#methodology">Methodology</a></li>
@@ -359,22 +536,22 @@ footer p{font-size:12px;color:rgba(255,255,255,.35)}
     </div>
     <div class="company-card">
       <div class="company-tag">Computer Vision &middot; AgTech</div>
-      <h3>Herdian</h3>
+      <h3><a href="https://www.herdian.com.br/" target="_blank" class="company-link">Herdian &#8599;</a></h3>
       <p>Computer vision for intelligent management in the animal protein supply chain. Partnerships with IPT, USP and UFABC. Supported by Finep, Fapesp and Fapemig.</p>
     </div>
     <div class="company-card">
       <div class="company-tag">IoT &middot; HealthTech</div>
-      <h3>Kinology</h3>
+      <h3><a href="https://kinology.com.br/" target="_blank" class="company-link">Kinology &#8599;</a></h3>
       <p>IoT for digital revolution in physiotherapy and biomechanics. Serving clients across 8 countries with contracts in major industrial groups.</p>
     </div>
     <div class="company-card">
       <div class="company-tag">Biofabrication &middot; MedTech</div>
-      <h3>Quantis</h3>
+      <h3><a href="https://www.quantis.bio/" target="_blank" class="company-link">Quantis &#8599;</a></h3>
       <p>Biofabrication of human extracellular matrix for regenerative medicine and cosmetics. 12 market verticals explored with 3 proofs of concept underway.</p>
     </div>
     <div class="company-card">
       <div class="company-tag">Computer Vision &middot; AgTech</div>
-      <h3>Cromai</h3>
+      <h3><a href="https://www.cromai.com/" target="_blank" class="company-link">Cromai &#8599;</a></h3>
       <p>Computer vision and AI to boost productivity in sugarcane and soybean fields. International patents developed with Embrapa. Google Israel AI Award winner.</p>
     </div>
   </div>
@@ -498,6 +675,24 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.3, rootMargin: '-5% 0px -5% 0px' });
 sections.forEach(s => observer.observe(s));
+
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+  menuToggle.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+const mobileNavLinks = document.querySelectorAll('nav ul li a');
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('show');
+    menuToggle.classList.remove('active');
+  });
+});
 </script>
 
 </body>
