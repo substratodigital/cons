@@ -4,7 +4,6 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Cons Ciência</title>
-<link rel="icon" type="image/svg+xml" href="logo/icon-cons-ciencia.svg"/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -29,11 +28,8 @@ nav{
   padding:0 60px;height:70px;
 }
 .logo{display:flex;align-items:center;text-decoration:none}
-.logo-img {
-  height: 50px;
-  width: auto;
-  display: block;
-}
+.logo-box{background:var(--orange);padding:7px 14px;border-radius:4px}
+.logo-box span{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;color:white;text-transform:uppercase;letter-spacing:.1em;display:block;line-height:1.2}
 nav ul{list-style:none;display:flex;gap:6px;align-items:center}
 nav ul li a{
   font-size:12px;font-weight:600;letter-spacing:.1em;
@@ -111,8 +107,7 @@ section{padding:100px 60px}
 .sdg-pill{background:var(--orange);color:white;padding:8px 20px;border-radius:100px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
 .tech-pillars{display:flex;flex-direction:column;gap:14px}
 .tech-item{display:flex;align-items:flex-start;gap:16px;padding:20px;background:var(--bg-card);border-radius:8px;border-left:4px solid var(--orange)}
-.tech-icon{width:42px;height:42px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
-.tech-item{display:flex;align-items:center;gap:16px;padding:20px;background:var(--bg-card);border-radius:8px;border-left:4px solid var(--orange)}
+.tech-icon{font-size:26px;flex-shrink:0;margin-top:2px}
 .tech-item h4{font-size:20px;font-weight:700;margin-bottom:4px}
 .tech-item p{font-size:13px;color:var(--mid)}
 
@@ -350,7 +345,10 @@ footer p{font-size:12px;color:rgba(255,255,255,.35)}
 <!-- NAV -->
 <nav>
   <a href="#hero" class="logo">
-    <img src="logo/logo-cons-ciencia-color.svg" alt="Cons Ciência" class="logo-img">
+    <div class="logo-box">
+      <span>CONS &#10005;</span>
+      <span>CI&Ecirc;NCIA</span>
+    </div>
   </a>
   <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
     <span class="bar"></span>
@@ -382,23 +380,17 @@ footer p{font-size:12px;color:rgba(255,255,255,.35)}
   <p class="section-intro">We curate scientist-founders passionate about entrepreneurship and frontier technology, building companies that deliver real value and lasting impact aligned with the UN Sustainable Development Goals.</p>
   <div class="pillars">
     <div class="pillar-card">
-      <div class="pillar-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 1 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
-      </div>
+      <div class="pillar-icon">&#9854;</div>
       <h3>Evergreen Vehicle</h3>
       <p>Patient capital with no exit pressure. We build long-term relationships and support companies through every stage of their journey unconstrained by fund timelines.</p>
     </div>
     <div class="pillar-card">
-      <div class="pillar-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="5" y1="7" x2="19" y2="7"/><path d="M5 7l3 10M19 7l-3 10"/></svg>
-      </div>
+      <div class="pillar-icon">&#9878;</div>
       <h3>No Performance Fee</h3>
       <p>Our managers are also investors. No performance fees means no misaligned incentives. We succeed only when our portfolio companies succeed.</p>
     </div>
     <div class="pillar-card">
-      <div class="pillar-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-      </div>
+      <div class="pillar-icon">&#9678;</div>
       <h3>Super-Return Control</h3>
       <p>A unique mechanism that redistributes excess gains to reinvest in the ecosystem, strengthening the chain of value and enabling more circular outcomes.</p>
     </div>
@@ -412,44 +404,32 @@ footer p{font-size:12px;color:rgba(255,255,255,.35)}
   <p class="section-intro">Six principles guide every decision we make, from how we source founders to how we structure governance.</p>
   <div class="beliefs-grid">
     <div class="belief-card">
-      <div class="belief-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      </div>
+      <div class="belief-icon">&#128269;</div>
       <h4>Start from Conception</h4>
       <p>A singular opportunity to build a healthy and fair model at the most critical and least competitive moment.</p>
     </div>
     <div class="belief-card">
-      <div class="belief-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h14M5 22h14M19 2v6a7 7 0 0 1-2.12 4.95L12 18l-4.88-5.05A7 7 0 0 1 5 8V2Z"/></svg>
-      </div>
+      <div class="belief-icon">&#8987;</div>
       <h4>No Rush, No Pause</h4>
       <p>Responsible development tied to preserving critical performance indicators. Never sacrificing quality for speed.</p>
     </div>
     <div class="belief-card">
-      <div class="belief-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-4.12 2.5 2.5 0 0 1 0-4.88 2.5 2.5 0 0 1 2.46-3.06ZM14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-4.12 2.5 2.5 0 0 0 0-4.88 2.5 2.5 0 0 0-2.46-3.06Z"/></svg>
-      </div>
+      <div class="belief-icon">&#129504;</div>
       <h4>Permanence Mindset</h4>
       <p>Returns based on consistent result flows, not perverse growth cycles and irrational multiple projections.</p>
     </div>
     <div class="belief-card">
-      <div class="belief-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-      </div>
+      <div class="belief-icon">&#128200;</div>
       <h4>Influence on Management Culture</h4>
       <p>We actively shape the management culture of our portfolio, focusing on the point of balance and sustainable profitability.</p>
     </div>
     <div class="belief-card">
-      <div class="belief-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1 .4 2.5 1.5 3.5.7.8 1.3 1.5 1.5 2.5h4ZM9 18h6M10 22h4"/></svg>
-      </div>
+      <div class="belief-icon">&#128161;</div>
       <h4>Distributed Results</h4>
       <p>A fairer distribution of results to all stakeholders: founders, investors, employees and the broader community.</p>
     </div>
     <div class="belief-card">
-      <div class="belief-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
-      </div>
+      <div class="belief-icon">&#127758;</div>
       <h4>Sociocratic Governance</h4>
       <p>More decentralized political and economic power. Decisions made through consent, not command.</p>
     </div>
@@ -531,27 +511,21 @@ footer p{font-size:12px;color:rgba(255,255,255,.35)}
     </div>
     <div class="tech-pillars">
       <div class="tech-item">
-        <div class="tech-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 15h.01M16 15h.01"/><polyline points="9 21 9 18 15 18 15 21"/></svg>
-        </div>
+        <div class="tech-icon">&#129302;</div>
         <div>
           <h4>Automation</h4>
           <p>Industrial IoT, robotics and cobots transforming traditional industries at scale</p>
         </div>
       </div>
       <div class="tech-item">
-        <div class="tech-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
+        <div class="tech-icon">&#128065;</div>
         <div>
           <h4>Applied AI</h4>
           <p>Computer vision, natural language processing and machine learning applied to real-world problems</p>
         </div>
       </div>
       <div class="tech-item">
-        <div class="tech-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 4.5c5.5 0 5.5 15 11 15M4.5 19.5c5.5 0 5.5-15 11-15M8.5 8.5h7M8.5 15.5h7M6 12h12"/></svg>
-        </div>
+        <div class="tech-icon">&#129516;</div>
         <div>
           <h4>Biological Revolution</h4>
           <p>Bio-molecules, bio-systems, bio-computation, bioprinting and advanced biomaterials</p>
@@ -573,28 +547,23 @@ footer p{font-size:12px;color:rgba(255,255,255,.35)}
       <p>Data Science applied to male sperm analysis to support cancer diagnosis with greater precision and accessibility.</p>
     </div>
     <div class="company-card">
-      <div class="company-tag">Education &middot; Social Impact</div>
-      <h3><a href="https://www.albaedu.org/" target="_blank" class="company-link">Albaedu</a></h3>
-      <p>Evidence-based pedagogical strategies and educational solutions supporting public schools to accelerate learning recovery and promote educational equity.</p>
-    </div>
-    <div class="company-card">
       <div class="company-tag">Computer Vision &middot; AgTech</div>
-      <h3><a href="https://www.herdian.com.br/" target="_blank" class="company-link">Herdian</a></h3>
+      <h3><a href="https://www.herdian.com.br/" target="_blank" class="company-link">Herdian &#8599;</a></h3>
       <p>Computer vision for intelligent management in the animal protein supply chain. Partnerships with IPT, USP and UFABC. Supported by Finep, Fapesp and Fapemig.</p>
     </div>
     <div class="company-card">
       <div class="company-tag">IoT &middot; HealthTech</div>
-      <h3><a href="https://kinology.com.br/" target="_blank" class="company-link">Kinology</a></h3>
+      <h3><a href="https://kinology.com.br/" target="_blank" class="company-link">Kinology &#8599;</a></h3>
       <p>IoT for digital revolution in physiotherapy and biomechanics. Serving clients across 8 countries with contracts in major industrial groups.</p>
     </div>
     <div class="company-card">
       <div class="company-tag">Biofabrication &middot; MedTech</div>
-      <h3><a href="https://www.quantis.bio/" target="_blank" class="company-link">Quantis</a></h3>
+      <h3><a href="https://www.quantis.bio/" target="_blank" class="company-link">Quantis &#8599;</a></h3>
       <p>Biofabrication of human extracellular matrix for regenerative medicine and cosmetics. 12 market verticals explored with 3 proofs of concept underway.</p>
     </div>
     <div class="company-card">
       <div class="company-tag">Computer Vision &middot; AgTech</div>
-      <h3><a href="https://www.cromai.com/" target="_blank" class="company-link">Cromai</a></h3>
+      <h3><a href="https://www.cromai.com/" target="_blank" class="company-link">Cromai &#8599;</a></h3>
       <p>Computer vision and AI to boost productivity in sugarcane and soybean fields. International patents developed with Embrapa. Google Israel AI Award winner.</p>
     </div>
   </div>
@@ -644,8 +613,8 @@ footer p{font-size:12px;color:rgba(255,255,255,.35)}
           <li><strong>CCA IBGC</strong><span>Corporate Governance</span></li>
         </ul>
         <div class="team-contacts">
-          <a href="mailto:alexandre.mescolin@consciencia.com" class="contact-item">
-            &#9993; alexandre.mescolin@consciencia.com
+          <a href="mailto:alexandre.mescolin@cons-ciencia.io" class="contact-item">
+            &#9993; alexandre.mescolin@cons-ciencia.io
           </a>
           <a href="https://www.linkedin.com/in/alexandremescolin" target="_blank" class="contact-item">
             &#128279; linkedin.com/in/alexandremescolin
@@ -664,16 +633,14 @@ footer p{font-size:12px;color:rgba(255,255,255,.35)}
       </div>
       <div class="team-info">
         <ul class="team-bio">
-          <li><strong>Escola Polit&eacute;cnica USP</strong><span>Mechatronic Engineering</span></li>
-          <li><strong>ITA</strong><span>MSc in Production Engineering</span></li>
-          <li><strong>D-Lab / MIT</strong><span>Design &amp; Engineering Exchange</span></li>
-          <li><strong>Insper</strong><span>Professor of Engineering &amp; Innovation</span></li>
-          <li><strong>CAOS Focado</strong><span>Founder &amp; CEO, Deep Tech Venture Builder</span></li>
-          <li><strong>Cromai &amp; Quantis</strong><span>Co-founder, two strategic exits in deep tech</span></li>
+          <li><strong>Escola Polit&eacute;cnica USP</strong><span>BSc in Mechatronic Engineering</span></li>
+          <li><strong>Escola Polit&eacute;cnica USP</strong><span>MSc in Mechatronic Engineering</span></li>
+          <li><strong>Mines Paris</strong><span>Exchange in Design &amp; Engineering</span></li>
+          <li><strong>ISITEC</strong><span>Professor of Engineering &amp; Innovation</span></li>
         </ul>
         <div class="team-contacts">
-          <a href="mailto:diogo.dutra@consciencia.com" class="contact-item">
-            &#9993; diogo.dutra@consciencia.com
+          <a href="mailto:diogo.dutra@cons-ciencia.io" class="contact-item">
+            &#9993; diogo.dutra@cons-ciencia.io
           </a>
           <a href="https://www.linkedin.com/in/diogo-dutra" target="_blank" class="contact-item">
             &#128279; linkedin.com/in/diogo-dutra
@@ -694,7 +661,10 @@ footer p{font-size:12px;color:rgba(255,255,255,.35)}
 <!-- FOOTER -->
 <footer>
   <div class="logo">
-    <img src="logo/logo-cons-ciencia-white.svg" alt="Cons Ciência" class="logo-img">
+    <div class="logo-box">
+      <span>CONS &#10005;</span>
+      <span>CI&Ecirc;NCIA</span>
+    </div>
   </div>
   <p>&copy; 2024 Cons Ci&ecirc;ncia. All rights reserved.</p>
   <p style="font-size:11px;color:rgba(255,255,255,.2)">Generative Investments in Technology and Science</p>
