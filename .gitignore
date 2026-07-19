@@ -1,0 +1,12 @@
+# IDE configurations
+.gemini/
+.agents/
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
